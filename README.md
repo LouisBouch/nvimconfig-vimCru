@@ -27,4 +27,4 @@ Contains the configuration files for my neovim setup.
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
-- [vimtex](https://github.com/akinsho/toggleterm.nvim)
+- [vimtex](https://github.com/lervag/vimtex)
