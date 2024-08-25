@@ -57,12 +57,16 @@ Contains the configuration files for my neovim setup.
 **Linting (Error analyzing)**
 - [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 
+**Formatting**
+- [conform.nvim](https://github.com/stevearc/conform.nvim)
+
 \*<sup>Optional dependencies</sup>    
 Complete list of plugins
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
 - [cmp-path](https://github.com/hrsh7th/cmp-path)
 - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+- [conform.nvim](https://github.com/stevearc/conform.nvim)
 - [dressing.nvim](https://github.com/stevearc/dressing.nvim)
 - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 - [gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)

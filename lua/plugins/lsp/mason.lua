@@ -37,9 +37,12 @@ return {
       -- auto-install configured servers (with lspconfig)
       automatic_installation = true, -- not the same as ensure_installed
     })
+    -- Plugin for auto-installing formatters/linters
     mason_tool_installer.setup({
         ensure_installed = {
           "cpplint", -- litner for cpp and c
+          "clang-format", -- formatter for c, cpp
+          "stylua", -- formatter for lua
       }
     })
   end,
