@@ -2,8 +2,52 @@
 
 Contains the configuration files for my neovim setup.
 
-# Current plugins
+# Current plugins and their dependencies
 
+**File browsing**
+- [telescope-file-browser.nvim](https://github.com/nvim-telescope/telescope-file-browser.nvim)
+  - [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
+  - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+  - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
+
+**Fuzzy search for files**
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+  - [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
+  - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
+  - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+
+**Text highlighting and file tree structure**
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+**Autocompletion**
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+  - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+  - [cmp-path](https://github.com/hrsh7th/cmp-path)
+  - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+  - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+  - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+
+**Autopairing of brackets and such**
+- [mini.nvim](https://github.com/echasnovski/mini.nvim)
+
+**Fancy line at the bottom of editor**
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+  - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+
+**Better looking option list and input (for ***vim.ui.select*** and ***vim.ui.input***)**
+- [dressing.nvim](https://github.com/stevearc/dressing.nvim)
+
+**Colorschemes**
+- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+- [gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)
+
+**Editor terminal**
+- [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
+
+**Live pdf editing**
+- [vimtex](https://github.com/lervag/vimtex)
+
+Complete list of plugins
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
 - [cmp-path](https://github.com/hrsh7th/cmp-path)
