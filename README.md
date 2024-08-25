@@ -24,15 +24,15 @@ Contains the configuration files for my neovim setup.
   - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
   - [cmp-path](https://github.com/hrsh7th/cmp-path)
   - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-  - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)<sup>*</sup>
-  - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)<sup>*</sup>
+  - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)*
+  - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)*
 
 **LSP stuff (makes sure nvim understands the full projects)**
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
   - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
   - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
-  - [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)<sup>*</sup>
+  - [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)*
 
 **Autopairing of brackets and such**
 - [mini.nvim](https://github.com/echasnovski/mini.nvim)
@@ -57,7 +57,7 @@ Contains the configuration files for my neovim setup.
 **Linting (Error analyzing)**
 - [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 
-<sup>*</sup> <small>Optional dependencies</small>
+\*<sub>Optional dependencies</sub>    
 Complete list of plugins
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
