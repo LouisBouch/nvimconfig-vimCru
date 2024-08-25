@@ -57,7 +57,7 @@ Contains the configuration files for my neovim setup.
 **Linting (Error analyzing)**
 - [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 
-\*<sub>Optional dependencies</sub>    
+\*<sup>Optional dependencies</sup>    
 Complete list of plugins
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
