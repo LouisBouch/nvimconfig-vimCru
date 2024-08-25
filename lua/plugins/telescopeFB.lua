@@ -5,7 +5,7 @@ local action_state = require('telescope.actions.state')
 
 -- Modified from fb_actions.change_cwd @ /home/moyenmedium/.local/share/vimCru/lazy/telescope-file-browser.nvim/lua/telescope/_extensions/file_browser/actions.lua
 -- Inspired by fb_actions.goto_parent_dir @ /home/moyenmedium/.local/share/vimCru/lazy/telescope-file-browser.nvim/lua/telescope/_extensions/file_browser/actions.lua
-custom_change_cwd = function(prompt_bufnr)
+local custom_change_cwd = function(prompt_bufnr)
   -- Adds path to allow for fb_utils and fb_lsp to load properly. Not ideal.
   package.path = package.path .. ";/home/moyenmedium/.local/share/vimCru/lazy/telescope-file-browser.nvim/lua/?.lua"
   local fb_utils = require "telescope._extensions.file_browser.utils"

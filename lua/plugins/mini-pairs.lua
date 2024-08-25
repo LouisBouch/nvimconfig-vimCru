@@ -3,7 +3,7 @@ return {
   version = false,
   event = "InsertEnter",  -- Only load when going into insert mode
   config = function()
-    opts = {}
+    local opts = {}
     require("mini.pairs").setup(opts)
   end,
 }
