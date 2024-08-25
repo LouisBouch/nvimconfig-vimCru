@@ -24,8 +24,15 @@ Contains the configuration files for my neovim setup.
   - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
   - [cmp-path](https://github.com/hrsh7th/cmp-path)
   - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
-  - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
-  - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+  - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)<sup>*</sup>
+  - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)<sup>*</sup>
+
+**LSP stuff (makes sure nvim understands the full projects)**
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+  - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+- [mason.nvim](https://github.com/williamboman/mason.nvim)
+  - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+  - [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)<sup>*</sup>
 
 **Autopairing of brackets and such**
 - [mini.nvim](https://github.com/echasnovski/mini.nvim)
@@ -47,6 +54,10 @@ Contains the configuration files for my neovim setup.
 **Live pdf editing**
 - [vimtex](https://github.com/lervag/vimtex)
 
+**Linting (Error analyzing)**
+- [nvim-lint](https://github.com/mfussenegger/nvim-lint)
+
+<sup>*</sup> <small>Optional dependencies</small>
 Complete list of plugins
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
@@ -59,9 +70,11 @@ Complete list of plugins
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+- [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [mini.nvim](https://github.com/echasnovski/mini.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
