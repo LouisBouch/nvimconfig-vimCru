@@ -117,9 +117,13 @@ return {
     })
 
     -- java
+    local on_attach_java = function(_, bufnr)
+      on_attach(nil, bufnr)
+      vim.keymap.set("n", "<leader>ji", "<cmd>lua require('jdtls').organize_imports()<CR>", { noremap = true, silent = true, desc = "Organize imports" })
+    end
     lspconfig["jdtls"].setup({
       capabilities = capabilities,
-      on_attach = on_attach,
+      on_attach = on_attach_java,
     })
 
     --[[ creates autocommand to manually display floating error/warning signs upon entering normal mode ]]
