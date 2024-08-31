@@ -29,6 +29,7 @@ return {
           "rust_analyzer",
           "pylsp",
           "clangd",
+          "jdtls",
           -- For linters/formatters/dap check mason-tool-installer
         },
         -- auto-install configured servers (with lspconfig)

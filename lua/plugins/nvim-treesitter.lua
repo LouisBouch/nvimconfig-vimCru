@@ -38,10 +38,12 @@ return {
       "rust",
       "latex",
       "c",
+      "cpp",
       "bash",
       "vim",
       "query",
       "gitignore",
+      "java",
     },
     incremental_selection = {
       enable = true,

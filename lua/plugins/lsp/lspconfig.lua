@@ -1,6 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
-  event = {"BufReadPre", "BufNewFile"},
+  event = { "BufReadPre", "BufNewFile" },
   enabled = true,
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
@@ -15,7 +15,7 @@ return {
 
     local keymap = vim.keymap
 
-    local opts = { noremap = true, silent = true}
+    local opts = { noremap = true, silent = true }
     local on_attach = function(_, bufnr)
       opts.buffer = bufnr
 
@@ -26,7 +26,7 @@ return {
       opts.desc = "Go to declaration"
       keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
-      opts.desc  = "Show LSP definitions"
+      opts.desc = "Show LSP definitions"
       keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show LSP definitions
 
       opts.desc = "Show LSP implementations"
@@ -45,7 +45,7 @@ return {
       keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show diagnostics for file
 
       opts.desc = "Show line diagnostics"
-      keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+      keymap.set("n", "<leader>g", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
       opts.desc = "Go to previous diagnostic"
       keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -67,11 +67,11 @@ return {
     local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define( hl, {text = icon, texthl = hl, numhl = ""})
+      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
     -- sorts gutter icons by severity Error>Warn>...
-    vim.diagnostic.config({severity_sort = true})
+    vim.diagnostic.config({ severity_sort = true })
 
     -- -- Setup language servers -- --
 
@@ -82,7 +82,7 @@ return {
       settings = {
         Lua = {
           completion = {
-            callSnippet = "Both"
+            callSnippet = "Both",
           },
           -- recognizes the global "vim"
           diagnostics = {
@@ -116,14 +116,21 @@ return {
       on_attach = on_attach,
     })
 
---[[ creates autocommand to manually display floating error/warning signs upon entering normal mode ]]--
-vim.api.nvim_create_augroup("lsp", { clear = true })
-vim.api.nvim_create_autocmd({ "modechanged" }, {
-  group = "lsp",
-  pattern = "*:n",
-  callback = function()
-    vim.diagnostic.show()
-  end,
-})
+    -- java
+    lspconfig["jdtls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    --[[ creates autocommand to manually display floating error/warning signs upon entering normal mode ]]
+    --
+    vim.api.nvim_create_augroup("lsp", { clear = true })
+    vim.api.nvim_create_autocmd({ "modechanged" }, {
+      group = "lsp",
+      pattern = "*:n",
+      callback = function()
+        vim.diagnostic.show()
+      end,
+    })
   end,
 }
