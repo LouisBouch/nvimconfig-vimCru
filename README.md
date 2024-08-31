@@ -27,9 +27,11 @@ Contains the configuration files for my neovim setup.
   - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)*
   - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)*
 
-**LSP stuff (makes sure nvim understands the full projects)**
-- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+**LSP stuff**
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) ([Language specific setup](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md))
   - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+  - [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)*
+    - Used for java.
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
   - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
   - [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)*
@@ -61,9 +63,12 @@ Contains the configuration files for my neovim setup.
 - [conform.nvim](https://github.com/stevearc/conform.nvim)
 
 **Debugging**
-- [nvim-dap](https://github.com/mfussenegger/nvim-dap)
+- [nvim-dap](https://github.com/mfussenegger/nvim-dap) ([Language specific setup](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation))
   - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)*
   - [nvim-nio](https://github.com/nvim-neotest/nvim-nio)*
+  - [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)*
+    - Used for java.
+
 
 \*<sup>Optional addons</sup>    
 Complete list of plugins
@@ -85,6 +90,7 @@ Complete list of plugins
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
 - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
+- [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)
 - [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [nvim-nio](https://github.com/nvim-neotest/nvim-nio)
