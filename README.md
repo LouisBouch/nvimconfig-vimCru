@@ -60,7 +60,12 @@ Contains the configuration files for my neovim setup.
 **Formatting**
 - [conform.nvim](https://github.com/stevearc/conform.nvim)
 
-\*<sup>Optional dependencies</sup>    
+**Debugging**
+- [nvim-dap](https://github.com/mfussenegger/nvim-dap)
+  - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)*
+  - [nvim-nio](https://github.com/nvim-neotest/nvim-nio)*
+
+\*<sup>Optional addons</sup>    
 Complete list of plugins
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
@@ -78,8 +83,11 @@ Complete list of plugins
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
 - [mini.nvim](https://github.com/echasnovski/mini.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [nvim-dap](https://github.com/mfussenegger/nvim-dap)
+- [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
 - [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [nvim-nio](https://github.com/nvim-neotest/nvim-nio)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
