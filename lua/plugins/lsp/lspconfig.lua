@@ -41,6 +41,9 @@ return {
       opts.desc = "Smart rename"
       keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
+      opts.desc = "Diagnostics reset"
+      keymap.set("n", "<leader>rd", vim.diagnostic.reset, opts) -- show LSP type definitions
+
       opts.desc = "Show buffer diagnostics"
       keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show diagnostics for file
 
@@ -116,18 +119,18 @@ return {
       on_attach = on_attach,
     })
 
-    -- java
-    local on_attach_java = function(_, bufnr)
-      on_attach(nil, bufnr)
-      vim.keymap.set("n", "<leader>ji", "<cmd>lua require('jdtls').organize_imports()<CR>", { noremap = true, silent = true, desc = "Organize imports" })
-    end
-    lspconfig["jdtls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach_java,
-    })
+    -- java -> check jdtls.lua setup instead
+    -- local on_attach_java = function(_, bufnr)
+    --   on_attach(nil, bufnr)
+    --   vim.keymap.set("n", "<leader>ji", "<cmd>lua require('jdtls').organize_imports()<CR>", { noremap = true, silent = true, desc = "Organize imports" })
+    -- end
+    -- lspconfig["jdtls"].setup({
+    --   capabilities = capabilities,
+    --   on_attach = on_attach_java,
+    -- })
 
     --[[ creates autocommand to manually display floating error/warning signs upon entering normal mode ]]
-    --
+
     vim.api.nvim_create_augroup("lsp", { clear = true })
     vim.api.nvim_create_autocmd({ "modechanged" }, {
       group = "lsp",

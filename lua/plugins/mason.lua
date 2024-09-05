@@ -53,6 +53,8 @@ return {
           "clang-format", -- formatter for c, cpp
           "stylua", -- formatter for lua
           "codelldb", -- dap for c/c++/rust
+          "java-test", -- java tests?
+          "java-debug-adapter", -- dap for java
         },
       })
     end,

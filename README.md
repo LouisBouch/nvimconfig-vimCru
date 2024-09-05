@@ -31,7 +31,7 @@ Contains the configuration files for my neovim setup.
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) ([Language specific setup](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md))
   - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
   - [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)*
-    - Used for java.
+    - Used for java. (microsoft/java-debug needed?)
 - [mason.nvim](https://github.com/williamboman/mason.nvim)
   - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
   - [mason-tool-installer](https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim)*

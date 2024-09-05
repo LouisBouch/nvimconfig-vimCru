@@ -34,7 +34,12 @@ return {
       end, { desc = "Reset debugger configs" })
       vim.keymap.set("n", "<Leader>dt", function()
         dap.terminate()
+        require("dapui").close()
       end, { desc = "Terminate" })
+      vim.keymap.set("n", "<Leader>dd", function()
+        dap.disconnect()
+        require("dapui").close()
+      end, { desc = "Disconnect" })
 
       -- Breakpoint style
       vim.fn.sign_define("DapBreakpoint", {
@@ -79,6 +84,7 @@ return {
           stopOnEntry = false,
         },
       }
+      -- java -> look up jdtls setup in ../lsp/jdtls.lua instead
     end,
   },
   {

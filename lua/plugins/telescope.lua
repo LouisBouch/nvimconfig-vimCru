@@ -30,7 +30,7 @@ return {
       },
       pickers = {
         find_files = {
-          find_command = {"rg", "--files", "--hidden", "-g", "!.git"},
+          find_command = {"rg", "--files", "--hidden", "-g", "!.git", "--no-ignore"},
           path_display = file_path
         },
         oldfiles = {
