@@ -24,6 +24,7 @@ Contains the configuration files for my neovim setup.
   - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
   - [cmp-path](https://github.com/hrsh7th/cmp-path)
   - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+  - [cmp-dap](https://github.com/rcarriga/cmp-dap)
   - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)*
   - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)*
 
@@ -73,6 +74,7 @@ Contains the configuration files for my neovim setup.
 \*<sup>Optional addons</sup>    
 Complete list of plugins
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+- [cmp-dap](https://github.com/rcarriga/cmp-dap)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
 - [cmp-path](https://github.com/hrsh7th/cmp-path)
 - [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)

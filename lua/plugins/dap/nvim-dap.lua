@@ -8,34 +8,43 @@ return {
       vim.keymap.set("n", "<leader>dc", function()
         dap.continue()
       end, { desc = "Continue" })
+
       vim.keymap.set("n", "<F6>", function()
         dap.step_over()
       end, { desc = "Step over" })
+
       vim.keymap.set("n", "<F5>", function()
         dap.step_into()
       end, { desc = "Step into" })
+
       vim.keymap.set("n", "<F7>", function()
         dap.step_out()
       end, { desc = "Step out" })
+
       vim.keymap.set("n", "<Leader>db", function()
         dap.toggle_breakpoint()
       end, { desc = "Toggle breakpoint" })
+
       vim.keymap.set("n", "<Leader>dB", function()
         dap.set_breakpoint()
       end, { desc = "Set breakpoint" })
+
       vim.keymap.set("n", "<Leader>dl", function()
         dap.run_last()
       end, { desc = "Run last" })
+
       vim.keymap.set("n", "<Leader>dr", function()
         vim.b.dap_last_run = nil
-        if (vim.b.dap_last_run == nil) then
+        if vim.b.dap_last_run == nil then
           print("Successfully reset debugging configurations")
         end
       end, { desc = "Reset debugger configs" })
+
       vim.keymap.set("n", "<Leader>dt", function()
         dap.terminate()
         require("dapui").close()
       end, { desc = "Terminate" })
+
       vim.keymap.set("n", "<Leader>dd", function()
         dap.disconnect()
         require("dapui").close()
@@ -60,7 +69,10 @@ return {
       -- Setting up debuggers
 
       -- starting codelldb (c/c++/rust)
-      local codelldb_path = os.getenv("HOME") .. "/.local/share/" .. (os.getenv("NVIM_APPNAME") or "nvim") .. "/mason/packages/codelldb/extension/adapter/codelldb"
+      local codelldb_path = os.getenv("HOME")
+        .. "/.local/share/"
+        .. (os.getenv("NVIM_APPNAME") or "nvim")
+        .. "/mason/packages/codelldb/extension/adapter/codelldb"
       dap.adapters.codelldb = {
         type = "server",
         port = "${port}",
@@ -77,7 +89,8 @@ return {
           type = "codelldb",
           request = "launch",
           program = function()
-            vim.b.dap_last_run = vim.b.dap_last_run or vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+            vim.b.dap_last_run = vim.b.dap_last_run
+              or vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
             return vim.b.dap_last_run
           end,
           cwd = "${workspaceFolder}",
