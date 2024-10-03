@@ -44,6 +44,9 @@ return {
       "query",
       "gitignore",
       "java",
+      "html",
+      "css",
+      "javascript",
     },
     incremental_selection = {
       enable = true,

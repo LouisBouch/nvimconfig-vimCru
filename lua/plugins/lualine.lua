@@ -27,7 +27,8 @@ return {
         {'filename', color = {fg = "", gui = "bold"}},
         {'filetype'}
       },
-      lualine_x = {'encoding', 'fileformat'},
+      -- lualine_x = {'encoding', 'fileformat'},
+      lualine_x = {},
       lualine_y = {
         {'progress', separator = " ", padding = {left = 1, right = 0}},
         {'location', padding = {left = 0, right = 1}}

@@ -8,6 +8,11 @@ return {
       formatters_by_ft = {
         cpp = { "clang-format" },
         lua = { "stylua" },
+        markdown = { "prettier" },
+        css = { "prettier" },
+        html = { "prettier" },
+        javascript = { "prettier" },
+        json = { "prettier" },
       },
       format_on_save = function(bufnr)
         -- Disable formatting on save if certain properties are set

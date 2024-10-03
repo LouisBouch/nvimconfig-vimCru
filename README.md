@@ -56,6 +56,7 @@ Contains the configuration files for my neovim setup.
 
 **Live pdf editing**
 - [vimtex](https://github.com/lervag/vimtex)
+- [Inlyne](https://github.com/Inlyne-Project/inlyne) is a sweet tool for markdown previews. (Not in nvim, but I might make a plugin for it for better integration.)
 
 **Linting (Error analyzing)**
 - [nvim-lint](https://github.com/mfussenegger/nvim-lint)

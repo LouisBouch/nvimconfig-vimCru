@@ -30,6 +30,7 @@ return {
           "pylsp",
           "clangd",
           "jdtls",
+          "html", -- Requires npm "pacman -S npm"
           -- For linters/formatters/dap check mason-tool-installer
         },
         -- auto-install configured servers (with lspconfig)
@@ -55,6 +56,10 @@ return {
           "codelldb", -- dap for c/c++/rust
           "java-test", -- java tests?
           "java-debug-adapter", -- dap for java
+          "prettier", -- formatter for html, javascript, css, yaml, json, markdown...
+          "eslint_d", -- linter for javascript and typescript
+          "htmlhint", -- linter for html
+          "css-lsp", -- LSP for css
         },
       })
     end,

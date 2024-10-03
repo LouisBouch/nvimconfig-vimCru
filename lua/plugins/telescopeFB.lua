@@ -43,7 +43,21 @@ return {
           hijack_netrw = true,
           mappings = {
             ["i"] = {
-              ["<C-n>"] = actions.select_default,
+              ["<C-n>"] = function(prompt_buffer)
+                local entry = require("telescope.actions.state").get_selected_entry()
+                if entry and not entry.Path:is_dir() then
+                  -- Goes to normal mode first
+                  vim.cmd.stopinsert()
+                  -- Then select file after entering normal mode
+                  vim.schedule(function()
+                    actions.select_default(prompt_buffer)
+                  end)
+                else
+                  -- Open normally if folder
+                  actions.select_default(prompt_buffer)
+                end
+                -- Otherwise, the selected folds upon opening a file break
+              end,
               ["<C-h>"] = fb_actions.backspace,
               ["<C-_>"] = fb_actions.toggle_hidden,
               ["<C-o>"] = function()
@@ -63,7 +77,11 @@ return {
     -- open file_browser with the path of the current buffer
     -- vim.keymap.set("n", "<space>fb", ":Telescope file_browser path=%:p:h select_buffer=true no_ignore=true<CR>")
     vim.keymap.set("n", "<space>fb", function()
-      require("telescope").extensions.file_browser.file_browser({ path = "%:p:h", select_buffer = true, no_ignore = true })
+      require("telescope").extensions.file_browser.file_browser({
+        path = "%:p:h",
+        select_buffer = true,
+        no_ignore = true,
+      })
     end)
   end,
 }

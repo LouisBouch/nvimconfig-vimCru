@@ -67,6 +67,7 @@ opt.fillchars = {
 }
 -- Default fold level
 opt.foldlevel = 99
+opt.foldmethod = "indent"
 -- Format options
 opt.formatoptions = "jcroqlnt"
 opt.grepformat = "%f:%l:%c:%m"

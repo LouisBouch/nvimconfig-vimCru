@@ -41,14 +41,17 @@ return {
       opts.desc = "Smart rename"
       keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
+      opts.desc = "See function definition in popup window"
+      keymap.set("n", "<leader>gs", vim.lsp.buf.hover, opts) -- smart rename
+
       opts.desc = "Diagnostics reset"
       keymap.set("n", "<leader>rd", vim.diagnostic.reset, opts) -- show LSP type definitions
 
       opts.desc = "Show buffer diagnostics"
-      keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show diagnostics for file
+      keymap.set("n", "<leader>DD", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show diagnostics for file
 
       opts.desc = "Show line diagnostics"
-      keymap.set("n", "<leader>g", vim.diagnostic.open_float, opts) -- show diagnostics for line
+      keymap.set("n", "<leader>dd", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
       opts.desc = "Go to previous diagnostic"
       keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -111,10 +114,25 @@ return {
     lspconfig["rust_analyzer"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      cmd = { "rust-analyzer" },
+      filetypes = { "rust" },
+      root_dir = function () return vim.fs.dirname(vim.fs.find({ "Cargo.toml", "rust-project.json", ".git" }, { upward = true })[1]) end,
+      single_file_support = true,
     })
 
     -- c/cpp
     lspconfig["clangd"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    -- html
+    lspconfig["html"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    -- html
+    lspconfig["cssls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })

@@ -11,6 +11,9 @@ return {
     lint.linters_by_ft = {
       c = {"cpplint"},
       cpp = {"cpplint"},
+      javascript = {"eslint_d"},
+      typescript = {"eslint_d"},
+      html = {"htmlhint"},
     }
 
     -- Linter customization

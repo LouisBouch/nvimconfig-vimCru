@@ -97,6 +97,18 @@ return {
           stopOnEntry = false,
         },
       }
+
+      -- c
+      dap.configurations.c = dap.configurations.cpp
+
+      -- rust
+      dap.configurations.rust = dap.configurations.cpp
+      dap.configurations.rust[1].program = function()
+        local root = vim.fs.dirname(vim.fs.find({ "Cargo.toml", ".git" }, { upward = true })[1])
+        local build_folder = root .. "/target/debug"
+        vim.b.dap_last_run = vim.b.dap_last_run or vim.fn.input("Path to executable: ", build_folder .. "/", "file")
+        return vim.b.dap_last_run
+      end
       -- java -> look up jdtls setup in ../lsp/jdtls.lua instead
     end,
   },
