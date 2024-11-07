@@ -23,11 +23,11 @@ return {
       defaults = {
         mappings = {
           i = {
-            ["<C-k>"] = actions.move_selection_previous,
-            ["<C-j>"] = actions.move_selection_next,
+            ["<C-p>"] = actions.move_selection_previous,
+            ["<C-n>"] = actions.move_selection_next,
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
             -- ["<C-n>"] = actions.select_default,
-            ["<C-n>"] = function(prompt_buffer)
+            ["<A-j>"] = function(prompt_buffer)
               -- Sends escape
               -- vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<Esc>", true, false, true), "n", false)
               -- Goes to normal mode first

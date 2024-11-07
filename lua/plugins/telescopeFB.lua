@@ -43,7 +43,7 @@ return {
           hijack_netrw = true,
           mappings = {
             ["i"] = {
-              ["<C-n>"] = function(prompt_buffer)
+              ["<A-j>"] = function(prompt_buffer)
                 local entry = require("telescope.actions.state").get_selected_entry()
                 if entry and not entry.Path:is_dir() then
                   -- Goes to normal mode first

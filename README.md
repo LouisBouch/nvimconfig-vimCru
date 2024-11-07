@@ -66,6 +66,8 @@ Contains the configuration files for my neovim setup.
 
 **Debugging**
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap) ([Language specific setup](https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation))
+  - [nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python)*
+  - [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text)*
   - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)*
   - [nvim-nio](https://github.com/nvim-neotest/nvim-nio)*
   - [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)*
@@ -92,7 +94,9 @@ Complete list of plugins
 - [mini.nvim](https://github.com/echasnovski/mini.nvim)
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [nvim-dap](https://github.com/mfussenegger/nvim-dap)
+- [nvim-dap-python](https://github.com/mfussenegger/nvim-dap-python)
 - [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
+- [nvim-dap-virtual-text](https://github.com/theHamsta/nvim-dap-virtual-text)
 - [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)
 - [nvim-lint](https://github.com/mfussenegger/nvim-lint)
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
@@ -106,3 +110,5 @@ Complete list of plugins
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
 - [vimtex](https://github.com/lervag/vimtex)
+
+# External dependencies

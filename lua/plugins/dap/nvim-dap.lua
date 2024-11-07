@@ -81,6 +81,7 @@ return {
           command = codelldb_path,
           args = { "--port", "${port}" },
         },
+        showDisassembly = "never"
       }
       -- cpp
       dap.configurations.cpp = {
@@ -110,6 +111,7 @@ return {
         return vim.b.dap_last_run
       end
       -- java -> look up jdtls setup in ../lsp/jdtls.lua instead
+      -- python -> look up setup in ftplugins
     end,
   },
   {
@@ -135,6 +137,12 @@ return {
       dap.listeners.before.event_exited.dapui_config = function()
         dapui.close()
       end
+    end,
+  },
+  {
+    "theHamsta/nvim-dap-virtual-text",
+    config = function()
+      require("nvim-dap-virtual-text").setup()
     end,
   },
 }

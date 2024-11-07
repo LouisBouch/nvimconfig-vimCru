@@ -42,7 +42,7 @@ return {
       keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
       opts.desc = "See function definition in popup window"
-      keymap.set("n", "<leader>gs", vim.lsp.buf.hover, opts) -- smart rename
+      keymap.set("n", "<leader>gs", vim.lsp.buf.hover, opts)
 
       opts.desc = "Diagnostics reset"
       keymap.set("n", "<leader>rd", vim.diagnostic.reset, opts) -- show LSP type definitions
@@ -116,8 +116,18 @@ return {
       on_attach = on_attach,
       cmd = { "rust-analyzer" },
       filetypes = { "rust" },
-      root_dir = function () return vim.fs.dirname(vim.fs.find({ "Cargo.toml", "rust-project.json", ".git" }, { upward = true })[1]) end,
+      root_dir = function()
+        return vim.fs.dirname(vim.fs.find({ "Cargo.toml", "rust-project.json", ".git" }, { upward = true })[1])
+      end,
       single_file_support = true,
+      settings = {
+        ["rust-analyzer"] = {
+          completion = {
+            addCallArgumentSnippets = true, -- Disables auto-adding function argument placeholders
+            addCallParenthesis = true, -- Disables auto-adding parentheses
+          },
+        },
+      },
     })
 
     -- c/cpp
@@ -130,12 +140,50 @@ return {
     lspconfig["html"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      filetypes = { "html", "php" }, -- Run lsp on php files too
     })
     -- html
     lspconfig["cssls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
     })
+    -- php
+    lspconfig["phpactor"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    -- python
+    lspconfig["pyright"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+    -- lspconfig["pylsp"].setup({
+    --   capabilities = capabilities,
+    --   on_attach = on_attach,
+    --   settings = {
+    --     pylsp = {
+    --       plugins = {
+    --         -- formatter options
+    --         black = { enabled = true },
+    --         autopep8 = { enabled = false },
+    --         yapf = { enabled = false },
+    --         -- linter options
+    --         pylint = { enabled = true, executable = "pylint" },
+    --         pyflakes = { enabled = false },
+    --         pycodestyle = { enabled = false },
+    --         -- type checker
+    --         pylsp_mypy = { enabled = true },
+    --         -- auto-completion options
+    --         jedi_completion = { fuzzy = true },
+    --         -- import sorting
+    --         pyls_isort = { enabled = true },
+    --       },
+    --     },
+    --   },
+    --   flags = {
+    --     debounce_text_changes = 200,
+    --   },
+    -- })
 
     -- java -> check jdtls.lua setup instead
     -- local on_attach_java = function(_, bufnr)

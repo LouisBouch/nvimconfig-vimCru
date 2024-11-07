@@ -47,6 +47,8 @@ return {
       "html",
       "css",
       "javascript",
+      "php",
+      "python",
     },
     incremental_selection = {
       enable = true,

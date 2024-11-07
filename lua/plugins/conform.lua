@@ -13,6 +13,20 @@ return {
         html = { "prettier" },
         javascript = { "prettier" },
         json = { "prettier" },
+        php = { "php" },
+      },
+      -- Custom formatters
+      formatters = {
+        php = {
+          command = "php-cs-fixer",
+          args = {
+            "fix",
+            "$FILENAME",
+            -- "--config=/your/path/to/config/file/[filename].php",
+            -- "--allow-risky=yes", -- if you have risky stuff in config, if not you dont need it.
+          },
+          stdin = false,
+        },
       },
       format_on_save = function(bufnr)
         -- Disable formatting on save if certain properties are set

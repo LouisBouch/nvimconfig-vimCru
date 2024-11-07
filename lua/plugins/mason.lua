@@ -22,15 +22,18 @@ return {
         },
       })
       mason_lspconfig.setup({
-        -- list of servers for mason to isntall
+        -- list of servers for mason to install
         ensure_installed = {
           -- LSP
           "lua_ls",
           "rust_analyzer",
-          "pylsp",
+          "pylsp", -- two python lsp, only use one
+          "pyright",
           "clangd",
           "jdtls",
+          "cssls", -- LSP for css
           "html", -- Requires npm "pacman -S npm"
+          "phpactor", -- Requires php "pacman -S php"
           -- For linters/formatters/dap check mason-tool-installer
         },
         -- auto-install configured servers (with lspconfig)
@@ -59,7 +62,8 @@ return {
           "prettier", -- formatter for html, javascript, css, yaml, json, markdown...
           "eslint_d", -- linter for javascript and typescript
           "htmlhint", -- linter for html
-          "css-lsp", -- LSP for css
+          "php-cs-fixer", -- formatter for php
+          "debugpy", -- formatter for python
         },
       })
     end,
