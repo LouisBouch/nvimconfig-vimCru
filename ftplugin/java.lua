@@ -83,6 +83,7 @@ if is_available("nvim-dap") then
       capabilities = {
         workspace = {
           configuration = true,
+          build = true,
         },
         textDocument = {
           completion = {
@@ -99,6 +100,8 @@ if is_available("nvim-dap") then
     }
 
     config.root_dir = config.root_dir .. "/app" -- ADDITION TO MAKE SURE DEBUGGER CAN READ RESOURCES
+    -- local fun = dofile("/home/moyenmedium/luaScripts/print_table_tree.lua")
+    -- print(fun.print_table_tree(config))
     require("jdtls").start_or_attach(config)
 
     -- Give enough time for jdt to fully load the project, or it will fail with
@@ -106,7 +109,7 @@ if is_available("nvim-dap") then
     local timer = 2500
     for _ = 0, 12, 1 do
       vim.defer_fn(function()
-        require("jdtls.dap").setup_dap_main_class_configs()
+        -- require("jdtls.dap").setup_dap_main_class_configs()
       end, timer)
       timer = timer + 2500
     end

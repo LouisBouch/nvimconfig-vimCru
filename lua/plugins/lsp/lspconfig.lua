@@ -123,8 +123,8 @@ return {
       settings = {
         ["rust-analyzer"] = {
           completion = {
-            addCallArgumentSnippets = true, -- Disables auto-adding function argument placeholders
-            addCallParenthesis = true, -- Disables auto-adding parentheses
+            addCallArgumentSnippets = true,
+            addCallParenthesis = true,
           },
         },
       },
@@ -153,9 +153,18 @@ return {
       on_attach = on_attach,
     })
     -- python
+    local root_pyt = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1])
     lspconfig["pyright"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      settings = {
+        python = {
+          pythonPath = root_pyt and root_pyt .. "/.venv/bin/python3",
+        },
+        analysis = {
+          extraPaths = {"."},
+        },
+      },
     })
     -- lspconfig["pylsp"].setup({
     --   capabilities = capabilities,

@@ -53,6 +53,8 @@ end
 
 -- Normal, Visual and operator pending modes
 amap("<Space>", "<Nop>")
+amap("<C-d>", "<C-d>zz")
+amap("<C-u>", "<C-u>zz")
 
 -- Insert mode
 imap("<C-l>", "<Del>")

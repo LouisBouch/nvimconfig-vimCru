@@ -9,7 +9,7 @@ Contains the configuration files for my neovim setup.
   - [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
   - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
   - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
-
+- [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
 **Fuzzy search for files**
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
   - [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
@@ -85,6 +85,7 @@ Complete list of plugins
 - [dressing.nvim](https://github.com/stevearc/dressing.nvim)
 - [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
 - [gruvbox.nvim](https://github.com/ellisonleao/gruvbox.nvim)
+- [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip)

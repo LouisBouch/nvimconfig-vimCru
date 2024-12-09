@@ -8,6 +8,7 @@ return {
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "rafamadriz/friendly-snippets", -- useful snippets
     "rcarriga/cmp-dap", -- autocompletion source when in debug mode
+    "hrsh7th/cmp-nvim-lsp-signature-help", -- function parameter help
   },
   config = function()
     local cmp = require("cmp")
@@ -58,9 +59,10 @@ return {
       sources = cmp.config.sources({
         { name = "nvim_lsp" }, -- lsp servers
         { name = "luasnip" }, -- snippets
+        { name = "nvim_lsp_signature_help" }, -- function parameter help
         { name = "buffer" }, -- text within current buffer
-        { name = "path" },  -- file system paths
-        { name = "dap" },  -- debugging
+        { name = "path" }, -- file system paths
+        { name = "dap" }, -- debugging
       }),
     })
     -- Example custom snippets
@@ -73,10 +75,10 @@ return {
     local c = luasnip.choice_node
     luasnip.add_snippets("lua", { -- else snippet
       s("else", {
-        t({"else", "\t"}),
+        t({ "else", "\t" }),
         i(1, "--code"),
-        t({"", "end"}),
-      })
+        t({ "", "end" }),
+      }),
     })
-  end
+  end,
 }

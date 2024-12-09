@@ -26,7 +26,7 @@ return {
         ensure_installed = {
           -- LSP
           "lua_ls",
-          "rust_analyzer",
+          "rust_analyzer@2024-09-30",
           "pylsp", -- two python lsp, only use one
           "pyright",
           "clangd",
