@@ -162,7 +162,10 @@ return {
           pythonPath = root_pyt and root_pyt .. "/.venv/bin/python3",
         },
         analysis = {
-          extraPaths = {"."},
+          extraPaths = {
+            ".",
+            "./src",
+          },
         },
       },
     })
@@ -186,6 +189,13 @@ return {
     --         jedi_completion = { fuzzy = true },
     --         -- import sorting
     --         pyls_isort = { enabled = true },
+    --         -- jedi = {
+    --         --   -- Allows for own imports
+    --         --   extra_paths = {
+    --         --     ".",
+    --         --     "./src",
+    --         --   },
+    --         -- },
     --       },
     --     },
     --   },

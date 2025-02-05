@@ -63,7 +63,9 @@ return {
           "eslint_d", -- linter for javascript and typescript
           "htmlhint", -- linter for html
           "php-cs-fixer", -- formatter for php
-          "debugpy", -- formatter for python
+          "debugpy", -- debugger for python
+          "pylint", -- linter for python
+          "black", -- formatter for python
         },
       })
     end,

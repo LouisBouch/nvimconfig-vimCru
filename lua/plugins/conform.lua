@@ -14,6 +14,7 @@ return {
         javascript = { "prettier" },
         json = { "prettier" },
         php = { "php" },
+        python = { "black" },
       },
       -- Custom formatters
       formatters = {

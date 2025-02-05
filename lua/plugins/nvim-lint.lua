@@ -14,12 +14,16 @@ return {
       javascript = {"eslint_d"},
       typescript = {"eslint_d"},
       html = {"htmlhint"},
+      python = {"pylint"}, -- Currently not working
     }
 
     -- Linter customization
     require("lint").linters.cpplint.args = {
       "--filter=-legal/copyright"
     }
+    -- Set pylint to work in virtualenv
+    require("lint").linters.pylint.cmd = "python"
+    require("lint").linters.pylint.args = { "-m", "pylint", "-f", "json" }
 
     -- Autocommand to trigger linting when certain events are met
     vim.api.nvim_create_augroup("lint", {clear = true})
