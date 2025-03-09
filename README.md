@@ -10,6 +10,7 @@ Contains the configuration files for my neovim setup.
   - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
   - [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
 - [harpoon](https://github.com/ThePrimeagen/harpoon/tree/harpoon2)
+
 **Fuzzy search for files**
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
   - [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim)
@@ -73,6 +74,10 @@ Contains the configuration files for my neovim setup.
   - [nvim-jdtls](https://github.com/mfussenegger/nvim-jdtls)*
     - Used for java.
 
+**Movement**
+- [vim-easymotion](https://github.com/easymotion/vim-easymotion)
+  - [vim-repeat](https://github.com/tpope/vim-repeat)
+
 
 \*<sup>Optional addons</sup>    
 Complete list of plugins
@@ -110,6 +115,8 @@ Complete list of plugins
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+- [vim-easymotion](https://github.com/easymotion/vim-easymotion)
+- [vim-repeat](https://github.com/tpope/vim-repeat)
 - [vimtex](https://github.com/lervag/vimtex)
 
 # External dependencies

@@ -19,8 +19,8 @@ return {
       harpoon.ui:toggle_quick_menu(harpoon:list())
     end)
 
-    for i = 1, 9 do
-      vim.keymap.set("n", "<A-" .. i .. ">", function()
+    for i = 1, 10 do
+      vim.keymap.set("n", "<A-" .. i%10 .. ">", function()
         harpoon:list():select(i)
       end)
     end
