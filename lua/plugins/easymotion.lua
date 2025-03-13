@@ -1,5 +1,7 @@
 return {
-  "easymotion/vim-easymotion",
+  -- "easymotion/vim-easymotion",
+  "timsu92/vim-easymotion",
+  branch = "timsu92-fix-error-with-folds",
   dependencies = {
     "tpope/vim-repeat",
   },
