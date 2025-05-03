@@ -61,6 +61,7 @@ imap("<C-l>", "<Del>")
 imap("<C-f>", "<C-o>O")
 rmap("i", "<C-j>", "<CR>")
 rmap("i", "<C-h>", "<BS>")
+rmap("i", "<C-d>", "<Space><Esc>ce")-- Delete word in front
 
 -- Normal mode
 

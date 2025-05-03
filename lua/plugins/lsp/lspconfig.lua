@@ -153,7 +153,7 @@ return {
       on_attach = on_attach,
     })
     -- python
-    local root_pyt = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1])
+    local root_pyt = vim.fs.dirname(vim.fs.find({ ".venv" }, { upward = true })[1])
     lspconfig["pyright"].setup({
       capabilities = capabilities,
       on_attach = on_attach,

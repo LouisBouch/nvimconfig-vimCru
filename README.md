@@ -144,7 +144,8 @@ Complete list of plugins
 # Fixes
 
 **The easymotion version used is a fork from the original that surrounds "keepjumps..." with the following if statement in ~/.local/share/vimCru/lazy/vim-easymotion/autoload/EasyMotion.vim in order to fix issues with folds.**
-
+  "timsu92/vim-easymotion",
+  branch = "timsu92-fix-error-with-folds",
 ```
 if foldclosedend(pos[0]+1) != -1
     keepjumps call cursor(foldclosedend(pos[0]+1), 0)
