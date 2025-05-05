@@ -25,7 +25,7 @@ telescope.setup({
           if tail == nil then
             tail = text
           else
-            iconText = text:sub(icon[1][1][1], icon[1][1][2]+1)
+            iconText = text:sub(icon[1][1][1], icon[1][1][2] + 1)
           end
           if path:match("mod%.rs$") then
             return string.format("%s%s (%s)\t\t%s", iconText, tail, parent, ancestors), icon
@@ -37,6 +37,27 @@ telescope.setup({
 
         return entry
       end,
+    },
+  },
+})
+-- Add module information to lualine when opening mod.rs file.
+local lualine = require("lualine")
+lualine.setup({
+  sections = {
+    lualine_c = {
+      {
+        function()
+          local tail = vim.fn.expand("%:t")
+          if tail:match("mod%.rs") then
+            local full = vim.fn.expand("%:p")
+            local parent = full:match(".*/(.-)/[^/]+$")
+            tail = tail .. " (" .. parent ..")"
+          end
+          return tail .. (vim.bo.modified and " [+]" or "")
+        end,
+        color = { fg = "", gui = "bold" },
+      },
+      { "filetype" },
     },
   },
 })

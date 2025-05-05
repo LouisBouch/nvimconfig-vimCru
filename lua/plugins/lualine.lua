@@ -4,9 +4,9 @@ return {
   opts = {
     options = {
       icons_enabled = true,
-      theme = 'auto',
-      component_separators = { left = '', right = ''},
-      section_separators = { left = '', right = ''},
+      theme = "auto",
+      component_separators = { left = "", right = "" },
+      section_separators = { left = "", right = "" },
       disabled_filetypes = {
         statusline = {},
         winbar = {},
@@ -18,35 +18,42 @@ return {
         statusline = 1000,
         tabline = 1000,
         winbar = 1000,
-      }
+      },
     },
     sections = {
-      lualine_a = {'mode'},
-      lualine_b = {'branch', 'diff', 'diagnostics'},
+      lualine_a = { "mode" },
+      lualine_b = { "branch", "diff", "diagnostics" },
       lualine_c = {
-        {'filename', color = {fg = "", gui = "bold"}},
-        {'filetype'}
+        {
+          "filename",
+          color = { fg = "", gui = "bold" },
+        },
+        { "filetype" },
       },
       -- lualine_x = {'encoding', 'fileformat'},
       lualine_x = {},
       lualine_y = {
-        {'progress', separator = " ", padding = {left = 1, right = 0}},
-        {'location', padding = {left = 0, right = 1}}
+        { "progress", separator = " ", padding = { left = 1, right = 0 } },
+        { "location", padding = { left = 0, right = 1 } },
       },
-      lualine_z = {function() return " " .. os.date("%R")end }
+      lualine_z = {
+        function()
+          return " " .. os.date("%R")
+        end,
+      },
     },
     inactive_sections = {
       lualine_a = {},
       lualine_b = {},
-      lualine_c = {'filename'},
-      lualine_x = {'location'},
+      lualine_c = { "filename" },
+      lualine_x = { "location" },
       lualine_y = {},
-      lualine_z = {}
+      lualine_z = {},
     },
     tabline = {},
     winbar = {},
     inactive_winbar = {},
-    extensions = {}
-  }
+    extensions = {},
+  },
 }
 -- Eventually, add diagnostics

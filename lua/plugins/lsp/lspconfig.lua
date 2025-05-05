@@ -54,10 +54,14 @@ return {
       keymap.set("n", "<leader>dd", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
       opts.desc = "Go to previous diagnostic"
-      keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
+      keymap.set("n", "[d", function()
+        vim.diagnostic.jump({ count = -1, float = true })
+      end, opts) -- jump to previous diagnostic in buffer
 
       opts.desc = "Go to next diagnostic"
-      keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
+      keymap.set("n", "]d", function()
+        vim.diagnostic.jump({ count = 1, float = true })
+      end, opts) -- jump to next diagnostic in buffer
 
       opts.desc = "Show documentation for what is under cursor"
       keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
@@ -70,11 +74,18 @@ return {
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
     -- change the diagnostic symbols in the sign column
-    local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-    for type, icon in pairs(signs) do
+    local symbols = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+    local signs = { text = {}, numhl = {} }
+    for type, icon in pairs(symbols) do
       local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+      -- vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
+      signs.text[vim.diagnostic.severity[type:upper()]] = icon
+      signs.numhl[vim.diagnostic.severity[type:upper()]] = hl
+      -- Sets hl for diangostic (Doesn't work, it is set before coloscheme is activated. Use autocmd instead.)
+      -- vim.api.nvim_set_hl(0, "DiagnosticSignError", { fg = "Black" })
     end
+    -- vim.diagnostic.config({ signs = { text = text, numhl = numhl } })
+    vim.diagnostic.config({ signs = signs })
 
     -- sorts gutter icons by severity Error>Warn>...
     vim.diagnostic.config({ severity_sort = true })
