@@ -49,6 +49,10 @@ return {
       "javascript",
       "php",
       "python",
+      "typescript",
+      "javascript",
+      "tsx",
+      -- "jsx" -- Does not exist? Maybe javascript makes it work.
     },
     incremental_selection = {
       enable = true,

@@ -6,7 +6,7 @@
 --
 vim.api.nvim_create_augroup("tex", { clear = true })
 
--- Loads default template
+-- Loads default template for latex files
 vim.api.nvim_create_autocmd({ "BufNewFile" }, {
   group = "tex",
   pattern = "*.tex",

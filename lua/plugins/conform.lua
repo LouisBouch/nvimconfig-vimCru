@@ -12,6 +12,7 @@ return {
         css = { "prettier" },
         html = { "prettier" },
         javascript = { "prettier" },
+        typescript = { "prettier" },
         json = { "prettier" },
         php = { "php" },
         python = { "black" },

@@ -134,6 +134,7 @@ Complete list of plugins
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 - [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+- [typescript-tools.nvim](https://github.com/pmizio/typescript-tools.nvim)
 - [vim-cutlass](https://github.com/svermeulen/vim-cutlass)
 - [vim-easymotion](https://github.com/easymotion/vim-easymotion)
 - [vim-repeat](https://github.com/tpope/vim-repeat)

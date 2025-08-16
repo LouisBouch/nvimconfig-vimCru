@@ -75,12 +75,13 @@ return {
 
     -- change the diagnostic symbols in the sign column
     local symbols = { Error = " ", Warn = " ", Hint = " ", Info = " " }
-    local signs = { text = {}, numhl = {} }
+    local signs = { text = {}, numhl = {}, linehl = {} }
     for type, icon in pairs(symbols) do
       local hl = "DiagnosticSign" .. type
       -- vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
       signs.text[vim.diagnostic.severity[type:upper()]] = icon
       signs.numhl[vim.diagnostic.severity[type:upper()]] = hl
+      signs.linehl[vim.diagnostic.severity[type:upper()]] = ""
       -- Sets hl for diangostic (Doesn't work, it is set before coloscheme is activated. Use autocmd instead.)
       -- vim.api.nvim_set_hl(0, "DiagnosticSignError", { fg = "Black" })
     end
