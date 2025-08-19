@@ -9,7 +9,8 @@ end
 
 return {
   "nvim-telescope/telescope.nvim",
-  branch = "0.1.x",
+  -- branch = "0.1.x", -- Deprecation issues
+  commit = "b4da76be54691e854d3e0e02c36b0245f945c2c7",
   dependencies = {
     "nvim-lua/plenary.nvim",
     { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
@@ -70,7 +71,6 @@ return {
     keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
     keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
     keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
-
     -- Send event that says telescope has finished loading
     -- vim.api.nvim_exec_autocmds("User", {pattern = "TelescopeLoaded"})
   end,
