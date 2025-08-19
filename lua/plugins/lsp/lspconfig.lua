@@ -145,6 +145,9 @@ return {
     })
     vim.lsp.enable("lua_ls")
 
+    -- HTML/CSS/... (requires: npm install -g emmet-ls? maybe not sinec I have it in mason)
+    vim.lsp.enable("emmet_language_server")
+
     -- rust
     lspconfig["rust_analyzer"].setup({
       capabilities = capabilities,

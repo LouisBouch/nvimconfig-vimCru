@@ -34,6 +34,7 @@ return {
           "cssls", -- LSP for css
           "html", -- Requires npm "pacman -S npm"
           "phpactor", -- Requires php "pacman -S php"
+          "emmet_language_server", -- Web stuff
           -- For linters/formatters/dap check mason-tool-installer
         },
         -- auto-install configured servers (with lspconfig)

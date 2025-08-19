@@ -16,6 +16,7 @@ return {
 
     -- loads vscode style snippets from installed plugins
     require("luasnip.loaders.from_vscode").lazy_load()
+    -- luasnip.filetype_extend("typescriptreact", {"html"}) -- Adds html snippets to .tsx. No longer required since emmet-language-server
 
     cmp.setup({
       completion = {
