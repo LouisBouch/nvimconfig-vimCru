@@ -54,11 +54,28 @@ local on_attach = function(_, bufnr)
   map_opts.desc = "Restart LSP"
   keymap.set("n", "<leader>rs", "<cmd>LspRestart<CR>", map_opts) -- restarts lsp
 end
+
+-- Command for restarting
+local function restart()
+  vim.api.nvim_create_user_command("TSLSRestart", function()
+    for _, c in ipairs(vim.lsp.get_clients({ bufnr = 0 })) do
+      if c.name == "typescript-tools" then
+        vim.lsp.stop_client(c.id, true)
+      end
+    end
+    vim.defer_fn(function()
+      require("typescript-tools").setup({on_attach=on_attach()})
+    end, 50)
+  end, {})
+end
 -- Setup the plugin
 return {
   "pmizio/typescript-tools.nvim",
   dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
   opts = {
-    on_attach = on_attach,
+    on_attach = function()
+      on_attach()
+      restart()
+    end,
   },
 }
